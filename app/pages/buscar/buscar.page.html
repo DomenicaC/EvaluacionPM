@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Libros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Titulo</ion-label>
+    <ion-input name="txtTit" [(ngModel)]="titulo"></ion-input>
+   
+  </ion-item>
+  <ion-button expand="block" (click)="busTit()">Buscar por Titulo</ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Autor</ion-label>
+    <ion-input name="txtAut" [(ngModel)]="autor"></ion-input>
+    <ion-button expand="block" (click)="busAut()">Buscar por Autor</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Resumen</ion-label>
+    <ion-input name="txtResu" [(ngModel)]="resumen"></ion-input>
+    <ion-button expand="block" (click)="busRes()">Buscar por Resumen</ion-button>
+  </ion-item>
+
+  <section>
+    <header>Acciones</header>
+    <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
+  </section>
+
+</ion-content>
